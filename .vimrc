@@ -18,6 +18,7 @@ call plug#begin()
  Plug 'vim-airline/vim-airline-themes'
  Plug 'cocopon/iceberg.vim'
  Plug 'altercation/vim-colors-solarized'
+ Plug 'cohama/lexima.vim'
 call plug#end()
 
 "エンコーディング
@@ -30,9 +31,8 @@ set ruler
 "行番号表示
 set number
 
-"色
+"色・カラーテーマ
 set background=dark
-"カラーテーマは入れたら有効にしてください
 colorscheme iceberg
 
 "Airline
@@ -47,6 +47,11 @@ highlight clear CursorLine
 "Markdown
 "折りたたみ無効
 let g:vim_markdown_folding_disabled = 1
+
+"lexima Ctrl+hをバックスペースと同じ挙動にする
+let lexima_ctrlh_as_backspace = 1
+"改行で自動インデント
+let g:lexima_enable_newline_rules = 1
 
 "シンタックスハイライト
 syntax enable
@@ -132,6 +137,9 @@ set timeout timeoutlen=100 ttimeoutlen=50
 
 """"""""""""""""""""""""""""""
 
+"NERDTree切り替え
+nnoremap <C-b> :NERDTreeToggle<CR>
+
 "インサートモードでEmacsカーソル移動
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
@@ -180,10 +188,6 @@ nnoremap し” ci"
 " ''の中身を変更する
 nnoremap し’ ci'
 
-" inoremap <esc> <esc>:w<cr>
-" xnoremap <esc> <esc>:w<cr>
-" vnoremap <esc> <esc>:w<cr>
-
 "[[でノーマルモードにして保存
 inoremap [[ <esc>:w<cr>
 xnoremap [[ <esc>:w<cr>
@@ -192,19 +196,9 @@ vnoremap [[ <esc>:w<cr>
 "ビジュアルモードでペースト時にyankしない
 xnoremap p "_dP
 
-"コメントアウト
-nnoremap C :Commentary<cr>
-xnoremap C :Commentary<cr>
-
-"括弧補完
-" inoremap { {}<Left>
-" inoremap {<Enter> {}<Left><CR><ESC><S-o>
-" inoremap ( ()<ESC>i
-" inoremap (<Enter> ()<Left><CR><ESC><S-o>
-" inoremap [ []<ESC>i
-" inoremap [<Enter> []<Left><CR><ESC><S-o>
-" inoremap ' ''<ESC>i
-" inoremap " ""<ESC>i
+" コメントアウト
+nnoremap <C-c> :Commentary<cr>
+xnoremap <C-c> :Commentary<cr>
 
 "ペースト時に自動インデントで崩れるのを防ぐ
 if &term =~ "xterm"
@@ -233,3 +227,9 @@ endif
 
 filetype plugin indent on
 
+"ディレクトリ指定で開いた時にNERDTreeを表示
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+"ファイル・ディレクトリ未指定で開いた時にNERDTreeを表示
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

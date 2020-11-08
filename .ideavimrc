@@ -20,3 +20,7 @@ nnoremap <C-CR> :action ShowIntentionActions<CR>
 nnoremap ,a :action GotoAction<CR>
 vnoremap ,a :action GotoAction<CR>
 
+nnoremap <C-b> :action HideAllWindows<CR>
+nnoremap <C-f> :action ActivateProjectToolWindow<CR>
+nnoremap <C-c> :action CommentByLineComment<CR>
+xnoremap <C-c> :action CommentByLineComment<CR>
