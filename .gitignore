@@ -9,7 +9,6 @@
 !/.vimrc
 !/.vim/backup
 !/.vim/autoload
-/.vim/plugged/*
 !/.vim/plugged/.gitkeep
 # !/.vim/*/
 # !/.vim/rc/
