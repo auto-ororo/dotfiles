@@ -9,6 +9,7 @@
 !/.vimrc
 !/.vim/backup
 !/.vim/autoload
+!/.vim/plugged
 # !/.vim/*/
 # !/.vim/rc/
 # !/.vim/rc/**
