@@ -7,10 +7,9 @@
 !/.zprezto
 !/.zpreztorc
 !/.vimrc
-!/.vim
+!/.vim/backup
 !/.vim/autoload
-/.vim/plug/*
-!/.vim/plug/.gitkeep
+!/.vim/plugged/.gitkeep
 # !/.vim/*/
 # !/.vim/rc/
 # !/.vim/rc/**
