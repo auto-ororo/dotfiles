@@ -8,7 +8,8 @@
 !/.zpreztorc
 !/.vimrc
 !/.vim
-!/.vim/**
+!/.vim/autoload
+!/.vim/plug/.gitkeep
 # !/.vim/*/
 # !/.vim/rc/
 # !/.vim/rc/**
