@@ -2,6 +2,8 @@
 /.**
 
 ### not ignore ###
+!/.gitconfig
+!/.fzf*
 !/.zshrc
 !/.zshenv
 !/.zprezto
@@ -12,7 +14,7 @@
 !/.vim/plugged/.gitkeep
 !/.github/**
 !/.ideavimrc
-
+!.gitconfig
 !/README.md
 !.gitignore
 !.gitkeep
