@@ -10,13 +10,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 # symlink dotfiles
-# ln -sf ~/dotfiles/.zprezto ~/.zprezto
-# ln -sf ~/dotfiles/.vimrc ~/.vimrc
-# ln -sf ~/dotfiles/.zshrc ~/.zshrc
-# ln -sf ~/dotfiles/.zpreztorc ~/.zpreztorc
-# ln -sf ~/dotfiles/.vim ~/.vim
-# ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
-
 for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
@@ -30,3 +23,6 @@ chsh -s $(which zsh)
 
 source ~/dotfiles/.zshrc
 source ~/dotfiles/.zpreztorc
+
+# install vim plugins
+vim -c PlugInstall -c q -c q
