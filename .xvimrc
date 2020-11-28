@@ -1,3 +1,5 @@
+set clipboard=unnamed
+
 "インサートモードでEmacsカーソル移動
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
@@ -51,3 +53,9 @@ xnoremap p "_dP
 " コメントアウト
 nnoremap <C-c> :Commentary<cr>
 xnoremap <C-c> :Commentary<cr>
+
+nnoremap R :xcmenucmd Rename...<cr>
+nnoremap gi :xcmenucmd Jump To Definition<cr>
+nnoremap gd :xcmenucmd Find Selected Symbol in Workspace<cr>
+nnoremap == :xccmd selectAll<cr>:xccmd indentSelection<cr>k
+nnoremap <C-b> :xccmd toggleNavigatorsVisibility<cr>
