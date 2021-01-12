@@ -1,11 +1,7 @@
 set clipboard=unnamed
-
-"インサートモードでEmacsカーソル移動
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
-inoremap <C-d> <Delete>
+set nocompatible
+set whichwrap=h,l
+set backspace=indent,eol,start
 
 "カーソル移動
 noremap H ^
