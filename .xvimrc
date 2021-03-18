@@ -55,3 +55,5 @@ nnoremap gi :xcmenucmd Jump To Definition<cr>
 nnoremap gd :xcmenucmd Find Selected Symbol in Workspace<cr>
 nnoremap == :xccmd selectAll<cr>:xccmd indentSelection<cr>k
 nnoremap <C-b> :xccmd toggleNavigatorsVisibility<cr>
+nnoremap <C-Tab> :xcmenucmd Go Back<cr>
+nnoremap <C-S-Tab> :xcmenucmd Go Forward<cr>
