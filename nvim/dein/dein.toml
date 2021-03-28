@@ -1,0 +1,58 @@
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]                                    
+repo = 'tpope/vim-fugitive'
+hook_add = '''                                    
+  nnoremap <silent> gs :Gstatus<CR><C-w>T                                    
+  nnoremap <silent> gps :Gpush<CR>                                    
+  nnoremap <silent> gpl :Gpull<CR>                                    
+'''    
+
+[[plugins]]                                    
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=100
+'''    

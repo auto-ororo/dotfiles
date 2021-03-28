@@ -1,7 +1,5 @@
 source ~/.vimrc
 
-nnoremap ,e :action SearchEverywhere<CR>
-nnoremap ,g :action FindInPath<CR>
 nnoremap ,s :action FileStructurePopup<CR>
 
 nnoremap gd :action GotoDeclaration<CR>
@@ -23,3 +21,9 @@ vnoremap ,a :action GotoAction<CR>
 nnoremap <C-b> :action HideAllWindows<CR>
 nnoremap <C-c> :action CommentByLineComment<CR>
 xnoremap <C-c> :action CommentByLineComment<CR>
+
+nnoremap <C-j> gT
+nnoremap <C-k> gt
+
+nnoremap <C-t> :action SearchEverywhere<CR>
+nnoremap <C-f> :action FindInPath<CR>

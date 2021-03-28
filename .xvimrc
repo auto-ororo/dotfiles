@@ -1,7 +1,9 @@
-set clipboard=unnamed
-set nocompatible
-set whichwrap=h,l
-set backspace=indent,eol,start
+"インサートモードでEmacsカーソル移動
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-d> <Delete>
 
 "カーソル移動
 noremap H ^
@@ -38,17 +40,8 @@ nnoremap し” ci"
 " ''の中身を変更する
 nnoremap し’ ci'
 
-"[[でノーマルモードにして保存
-inoremap [[ <esc>:w<cr>
-xnoremap [[ <esc>:w<cr>
-vnoremap [[ <esc>:w<cr>
-
 "ビジュアルモードでペースト時にyankしない
 xnoremap p "_dP
-
-" コメントアウト
-nnoremap <C-c> :Commentary<cr>
-xnoremap <C-c> :Commentary<cr>
 
 nnoremap R :xcmenucmd Rename...<cr>
 nnoremap gi :xcmenucmd Jump To Definition<cr>
@@ -56,3 +49,6 @@ nnoremap gd :xcmenucmd Find Selected Symbol in Workspace<cr>
 nnoremap == :xccmd selectAll<cr>:xccmd indentSelection<cr>k
 nnoremap <C-b> :xccmd toggleNavigatorsVisibility<cr>
 nnoremap <C-Tab> :xcmenucmd Go Back<cr>
+nnoremap <C-k> :xcmenucmd Show Next Tab<cr>
+nnoremap <C-j> :xcmenucmd Show Previous Tab<cr>
+nnoremap <C-t> :xcmenucmd Open Quickly...<cr>

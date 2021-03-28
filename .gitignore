@@ -18,6 +18,7 @@
 !.gitconfig
 !/README.md
 !/iterm
+!/nvim
 !.gitignore
 !.gitkeep
 !/install.sh
