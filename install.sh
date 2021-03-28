@@ -20,11 +20,10 @@ do
     ln -sf ~/dotfiles/$f ~/$f
 done
 
+ln -sf ~/dotfiles/nvim ~/.config/nvim
+
 # change shell
 chsh -s $(which zsh)
 
 source ~/dotfiles/.zshrc
 source ~/dotfiles/.zpreztorc
-
-# install vim plugins
-vim -c PlugInstall -c q -c q

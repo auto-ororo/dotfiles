@@ -22,13 +22,4 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
     }
 }
 
-# Vimでメモを開く
-function m () {  
-  if [ $# -ne 1 ]; then
-    vim + -c :MarkdownPreview ~/Documents/memo/default.md
-  else
-    vim + -c :MarkdownPreview ~/Documents/memo/$1.md
-  fi
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
