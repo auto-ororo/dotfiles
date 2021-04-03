@@ -1,5 +1,5 @@
-nnoremap <silent><C-t> :<C-u>Denite file/rec -start-filter<CR>
-nnoremap <silent><C-f> :<C-u>Denite -start-filter grep:::!<CR>
+nnoremap <silent><C-f> :<C-u>Denite file/rec -start-filter<CR>
+nnoremap <silent><C-g> :<C-u>Denite -start-filter grep:::!<CR>
 
 " Define mappings
 let s:floating_window_width_ratio = 0.9

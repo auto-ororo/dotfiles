@@ -53,4 +53,6 @@ xnoremap p "_dP
 nnoremap <silent><C-k> gt
 nnoremap <silent><C-j> gT
 
+nnoremap <silent>q :<C-u>q<CR>
+
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー

@@ -43,6 +43,8 @@ nnoremap し’ ci'
 "ビジュアルモードでペースト時にyankしない
 xnoremap p "_dP
 
+nnoremap <silent>q :<C-u>q<CR>
+
 nnoremap R :xcmenucmd Rename...<cr>
 nnoremap gi :xcmenucmd Jump To Definition<cr>
 nnoremap gd :xcmenucmd Find Selected Symbol in Workspace<cr>

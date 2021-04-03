@@ -26,3 +26,4 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 export BAT_THEME="Nord"
 
+alias g='git'
