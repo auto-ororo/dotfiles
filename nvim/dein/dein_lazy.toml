@@ -5,3 +5,7 @@ on_ft = ['toml']
 [[plugins]]
 repo = 'stephpy/vim-yaml'
 on_ft = ['yaml']
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']

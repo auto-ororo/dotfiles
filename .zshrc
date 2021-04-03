@@ -23,3 +23,6 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export BAT_THEME="Nord"
+
