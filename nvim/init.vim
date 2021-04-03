@@ -16,6 +16,7 @@ else
   colorscheme iceberg
   source ~/.config/nvim/plugins/plugins.vim
 
+  nnoremap <silent><C-t> :<C-u>terminal<CR>i
   tnoremap <Esc> <C-\><C-n>
 endif
 
