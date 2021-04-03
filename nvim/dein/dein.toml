@@ -45,11 +45,6 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]                                    
 repo = 'tpope/vim-fugitive'
-hook_add = '''                                    
-  nnoremap <silent> gs :Gstatus<CR><C-w>T                                    
-  nnoremap <silent> gps :Gpush<CR>                                    
-  nnoremap <silent> gpl :Gpull<CR>                                    
-'''    
 
 [[plugins]]                                    
 repo = 'airblade/vim-gitgutter'
