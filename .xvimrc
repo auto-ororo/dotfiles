@@ -53,4 +53,4 @@ nnoremap <C-b> :xccmd toggleNavigatorsVisibility<cr>
 nnoremap <C-Tab> :xcmenucmd Go Back<cr>
 nnoremap <C-k> :xcmenucmd Show Next Tab<cr>
 nnoremap <C-j> :xcmenucmd Show Previous Tab<cr>
-nnoremap <C-t> :xcmenucmd Open Quickly...<cr>
+nnoremap <C-f> :xcmenucmd Open Quickly...<cr>

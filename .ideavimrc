@@ -25,5 +25,7 @@ xnoremap <C-c> :action CommentByLineComment<CR>
 nnoremap <C-j> gT
 nnoremap <C-k> gt
 
-nnoremap <C-t> :action SearchEverywhere<CR>
-nnoremap <C-f> :action FindInPath<CR>
+nnoremap <C-f> :action SearchEverywhere<CR>
+nnoremap <C-g> :action FindInPath<CR>
+
+nnoremap q :action CloseContent<CR>

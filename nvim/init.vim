@@ -2,6 +2,7 @@ if exists('g:vscode')
   " VSCode extension
 else
   " ordinary neovim
+  
   source ~/.config/nvim/dein/dein.vim
 
   " 言語設定を英語にする

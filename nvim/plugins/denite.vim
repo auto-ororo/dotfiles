@@ -1,5 +1,8 @@
 nnoremap <silent><C-f> :<C-u>Denite file/rec -start-filter<CR>
 nnoremap <silent><C-g> :<C-u>Denite -start-filter grep:::!<CR>
+nnoremap <silent><C-y> :<C-u>Denite neoyank<CR>
+
+let g:denite_source_history_yank_enable =1
 
 " Define mappings
 let s:floating_window_width_ratio = 0.9
@@ -26,7 +29,7 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
   \ denite#do_map('do_action', 'tabopen')
   nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
+  \ denite#do_map('do_action', 'append')
   nnoremap <silent><buffer><expr> q
   \ denite#do_map('quit')
   nnoremap <silent><buffer><expr> i

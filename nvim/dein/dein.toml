@@ -4,7 +4,7 @@ repo = 'altercation/vim-colors-solarized'
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --bin'
-merged = '0'
+merged = 0
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'

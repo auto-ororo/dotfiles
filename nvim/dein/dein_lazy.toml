@@ -13,3 +13,9 @@ on_ft = ['kotlin']
 [[plugins]]
 repo = 'keith/swift.vim'
 on_ft = ['swift']
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+on_source = 'denite.nvim'
+on_event = 'TextYankPost'
+
