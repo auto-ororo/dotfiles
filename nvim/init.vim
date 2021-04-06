@@ -15,9 +15,10 @@ else
   "色・カラーテーマ
   set background=dark
   colorscheme iceberg
+
   source ~/.config/nvim/plugins/plugins.vim
 
-  nnoremap <silent><C-t> :<C-u>terminal<CR>i
+  nnoremap <silent><C-t> :<C-u>tabnew +term<CR>i
   tnoremap <Esc> <C-\><C-n>
 endif
 
