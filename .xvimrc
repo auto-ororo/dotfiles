@@ -41,7 +41,11 @@ nnoremap し” ci"
 nnoremap し’ ci'
 
 "ビジュアルモードでペースト時にyankしない
+vnoremap p "_dP
 xnoremap p "_dP
+
+"yank した文字列をクリップボードにコピー
+set clipboard=unnamed  
 
 nnoremap <silent>q :<C-u>q<CR>
 
