@@ -3,7 +3,6 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-p> <Up>
 inoremap <C-n> <Down>
-inoremap <C-d> <Delete>
 
 "カーソル移動
 noremap H ^
