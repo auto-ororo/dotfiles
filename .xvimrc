@@ -41,19 +41,17 @@ nnoremap し” ci"
 nnoremap し’ ci'
 
 "ビジュアルモードでペースト時にyankしない
-vnoremap p "_dP
 xnoremap p "_dP
 
 "yank した文字列をクリップボードにコピー
 set clipboard=unnamed  
 
-nnoremap <silent>q :<C-u>q<CR>
-
+nnoremap q :xcmenucmd Close Tab<cr> 
 nnoremap R :xcmenucmd Rename...<cr>
 nnoremap gi :xcmenucmd Jump To Definition<cr>
 nnoremap gd :xcmenucmd Find Selected Symbol in Workspace<cr>
 nnoremap == :xccmd selectAll<cr>:xccmd indentSelection<cr>k
-nnoremap <C-b> :xccmd toggleNavigatorsVisibility<cr>
+nnoremap <C-e> :xccmd toggleNavigatorsVisibility<cr>
 nnoremap <C-Tab> :xcmenucmd Go Back<cr>
 nnoremap <C-k> :xcmenucmd Show Next Tab<cr>
 nnoremap <C-j> :xcmenucmd Show Previous Tab<cr>
