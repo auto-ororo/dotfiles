@@ -19,6 +19,7 @@ nnoremap ,a :action GotoAction<CR>
 vnoremap ,a :action GotoAction<CR>
 
 nnoremap <C-b> :action HideAllWindows<CR>
+nnoremap <C-e> :action HideAllWindows<CR>
 nnoremap <C-c> :action CommentByLineComment<CR>
 xnoremap <C-c> :action CommentByLineComment<CR>
 

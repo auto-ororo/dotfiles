@@ -28,3 +28,6 @@ export BAT_THEME="Nord"
 
 alias g='git'
 alias v='nvim'
+
+# Created by `pipx` on 2021-04-15 08:03:51
+export PATH="$PATH:/Users/ryo/.local/bin"
