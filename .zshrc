@@ -29,5 +29,8 @@ export BAT_THEME="Nord"
 alias g='git'
 alias v='nvim'
 
-# Created by `pipx` on 2021-04-15 08:03:51
-export PATH="$PATH:/Users/ryo/.local/bin"
+export PATH="$PATH:~/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
