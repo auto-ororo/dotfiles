@@ -38,3 +38,6 @@ export NVM_DIR="$HOME/.nvm"
 export RBENV_ROOT=$(brew --prefix rbenv) 
 export PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
+
+export MINT_PATH="$HOME/.mint"
+export MINT_LINK_PATH="$MINT_PATH/bin"
