@@ -172,6 +172,7 @@ let g:coc_global_extensions = [
       \, 'coc-word' 
       \, 'coc-xml' 
       \, 'coc-kotlin'
+      \, 'coc-prettier'
       \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
