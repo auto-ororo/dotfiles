@@ -41,3 +41,5 @@ eval "$(rbenv init -)"
 
 export MINT_PATH="$HOME/.mint"
 export MINT_LINK_PATH="$MINT_PATH/bin"
+
+export PATH="$PATH:~/tool/flutter/bin"
