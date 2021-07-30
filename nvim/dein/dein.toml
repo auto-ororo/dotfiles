@@ -57,3 +57,9 @@ repo = 'neoclide/coc.nvim'
 
 [[plugins]]                                    
 repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
+[[plugins]]
+repo = 'thosakwe/vim-flutter'

@@ -44,5 +44,5 @@ export MINT_LINK_PATH="$MINT_PATH/bin"
 
 export PATH=$PATH:$HOME/tools/flutter/bin
 
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin

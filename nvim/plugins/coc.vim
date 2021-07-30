@@ -173,6 +173,7 @@ let g:coc_global_extensions = [
       \, 'coc-xml' 
       \, 'coc-kotlin'
       \, 'coc-prettier'
+      \, 'coc-flutter'
       \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
