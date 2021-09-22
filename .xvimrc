@@ -4,12 +4,6 @@ inoremap <C-b> <Left>
 inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 
-"カーソル移動
-noremap H ^
-noremap J }
-noremap K {
-noremap L $
-
 "ノーマルモードのまま改行
 nnoremap <CR> A<CR><ESC>
 "ノーマルモードのままスペース

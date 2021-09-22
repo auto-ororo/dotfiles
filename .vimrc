@@ -12,10 +12,6 @@ nnoremap gj j
 nnoremap gk k
 nnoremap <down> gj
 nnoremap <up> gk
-noremap H ^
-noremap J <C-d>
-noremap K <C-u> 
-noremap L $
 
 "ノーマルモードのまま改行
 nnoremap <CR> A<CR><ESC>
