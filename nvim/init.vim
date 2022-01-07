@@ -1,5 +1,10 @@
 if exists('g:vscode')
   " VSCode extension
+  " 複数行のコメントアウトに対応
+  xmap <C-/>  <Plug>VSCodeCommentary
+  nmap <C-/>  <Plug>VSCodeCommentary
+  omap <C-/>  <Plug>VSCodeCommentary
+  nmap <C-/> <Plug>VSCodeCommentaryLine
 else
   " ordinary neovim
   
