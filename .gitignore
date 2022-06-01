@@ -16,7 +16,10 @@
 !/.ideavimrc
 !.gitconfig
 !/README.md
+!/alfred
 !/iterm
+!/karabiner
+!/xcode
 !/nvim
 !.gitignore
 !.gitkeep

@@ -1,5 +1,15 @@
 #!/bin/zsh
 
+# Install libraries by Homebrew
+brew install bat rbenv nvm needle fzf neovim
+brew install --cask iterm2 android-studio slack google-japanese-ime google-chrome visual-studio-code alfred notion authy todoist karabiner-elements android-file-transfer 1password
+
+# Install Ricty
+brew tap sanemat/font
+brew install ricty
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
+
 # add submodule
 git submodule update --init --recursive
 

@@ -31,9 +31,6 @@ export RBENV_ROOT=$(brew --prefix rbenv)
 export PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 
-export MINT_PATH="$HOME/.mint"
-export MINT_LINK_PATH="$MINT_PATH/bin"
-
 export PATH=$PATH:$HOME/tools/flutter/bin
 
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
