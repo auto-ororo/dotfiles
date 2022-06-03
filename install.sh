@@ -1,13 +1,16 @@
 #!/bin/zsh
 
+# Homebrew Tap
+brew tap sanemat/font
+brew tap homebrew/cask-fonts
+
 # Install libraries by Homebrew
-brew install bat rbenv nvm needle fzf neovim
-brew install --cask iterm2 android-studio slack google-japanese-ime google-chrome visual-studio-code alfred notion authy todoist karabiner-elements android-file-transfer 1password
+brew install bat rbenv nvm needle fzf neovim pyenv openssl readline libyaml zlib
+brew install --cask iterm2 android-studio slack visual-studio-code alfred notion authy todoist karabiner-elements android-file-transfer 1password font-hack-nerd-font
 
 # Install Ricty
-brew tap sanemat/font
 brew install ricty
-cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+cp -f /opt/homebrew/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 
 # add submodule
@@ -30,7 +33,8 @@ do
     ln -sf ~/dotfiles/$f ~/$f
 done
 
-ln -sf ~/dotfiles/nvim ~/.config/nvim
+mkdir -p ~/.config
+ln -sf ~/dotfiles/nvim ~/.config
 
 # change shell
 chsh -s $(which zsh)
