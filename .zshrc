@@ -36,4 +36,6 @@ export PATH=$PATH:$HOME/tools/flutter/bin
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
