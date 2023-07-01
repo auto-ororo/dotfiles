@@ -57,3 +57,12 @@ repo = 'dart-lang/dart-vim-plugin'
 
 [[plugins]]
 repo = 'thosakwe/vim-flutter'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope-file-browser.nvim'
