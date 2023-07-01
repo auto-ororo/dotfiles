@@ -1,40 +1,3 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
-  If you don't know anything about Lua, I recommend taking some time to read through
-  a guide. One possible example:
-  - https://learnxinyminutes.com/docs/lua/
-
-  And then you can explore or search through `:help lua-guide`
-
-
-Kickstart Guide:
-
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now :)
---]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -126,6 +89,7 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
         vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
         vim.keymap.set('n', 'gp', require('gitsigns').preview_hunk)
+        vim.keymap.set('n', 'gu', require('gitsigns').reset_hunk)
       end,
     },
   },
@@ -170,6 +134,12 @@ require('lazy').setup({
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 
+  -- File Browser
+  {
+      "nvim-telescope/telescope-file-browser.nvim",
+      dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
+
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
@@ -211,7 +181,7 @@ require('lazy').setup({
 -- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -269,14 +239,38 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
+local fb_actions = require "telescope".extensions.file_browser.actions
 require('telescope').setup {
   defaults = {
     mappings = {
       i = {
+        ['<CR>'] = require "telescope.actions".select_tab,
         ['<C-u>'] = false,
         ['<C-d>'] = false,
+      },
+      n = {
+        ['<CR>'] = require "telescope.actions".select_tab,
+        l = require "telescope.actions".select_tab,
+        q = require "telescope.actions".close
+      }
+    },
+  },
+  extensions = {
+    file_browser = {
+      -- disables netrw and use telescope-file-browser in its place
+      hijack_netrw = true,
+      initial_mode = "normal",
+      mappings = {
+        i = {
+          -- your custom insert mode mappings
+        },
+        n = {
+          -- your custom normal mode mappings
+          h = fb_actions.backspace
+        },
       },
     },
   },
@@ -284,6 +278,8 @@ require('telescope').setup {
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+-- File Exploler
+pcall(require("telescope").load_extension, "file_browser")
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -302,6 +298,9 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+vim.keymap.set('n', '<C-p>', require('telescope.builtin').find_files, { desc = 'Quick Search' })
+vim.keymap.set('n', '<C-g>', require('telescope.builtin').live_grep, { desc = 'Live [G]rep' })
+vim.keymap.set('n', '<C-e>', require('telescope').extensions.file_browser.file_browser, { desc = 'Open File [E]xploler' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -404,7 +403,6 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')

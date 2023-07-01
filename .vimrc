@@ -15,8 +15,6 @@ nnoremap <up> gk
 
 "ノーマルモードのまま改行
 nnoremap <CR> A<CR><ESC>
-"ノーマルモードのままスペース
-nnoremap <space> i<space><right><esc>
 
 "rだけでリドゥ
 nnoremap r <C-r>
