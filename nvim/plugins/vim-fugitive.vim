@@ -1,1 +1,0 @@
-:command Gs Git status
