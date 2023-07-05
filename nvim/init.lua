@@ -128,8 +128,8 @@ require('lazy').setup({
     },
   },
 
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  -- Comment
+  'tpope/vim-commentary',
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -238,6 +238,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+
+-- [[ Configure Comment ]]
+vim.keymap.set('n', '<C-c>', ':Commentary<CR>', { silent = true })
+vim.keymap.set('v', '<C-c>', ':Commentary<CR>', { silent = true })
 
 
 -- [[ Configure Telescope ]]
