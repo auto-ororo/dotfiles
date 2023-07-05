@@ -31,12 +31,6 @@ alias teee='tee >(pbcopy)'
 
 export PATH="$PATH:~/.local/bin"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-# export PATH=$PATH:$HOME/tools/flutter/bin
-
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
 
