@@ -110,7 +110,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -127,6 +127,12 @@ require('lazy').setup({
       char = '┊',
       show_trailing_blankline_indent = false,
     },
+  },
+
+  -- Icons
+  {
+    'nvim-tree/nvim-web-devicons',
+    opts = {}
   },
 
   -- Comment
