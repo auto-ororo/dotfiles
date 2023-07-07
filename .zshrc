@@ -35,3 +35,19 @@ export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+function load-nvm () {
+  export NVM_DIR="$HOME/.nvm"
+  [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+}
+
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    if ! type nvm >/dev/null; then
+      load-nvm
+    fi
+    nvm use
+  fi
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
