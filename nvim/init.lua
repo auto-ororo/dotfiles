@@ -269,7 +269,8 @@ require('telescope').setup {
         },
         n = {
           -- your custom normal mode mappings
-          h = fb_actions.backspace
+          h = fb_actions.backspace,
+          cd = fb_actions.change_cwd
         },
       },
     },
