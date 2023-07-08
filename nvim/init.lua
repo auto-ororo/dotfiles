@@ -235,6 +235,10 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+
+vim.keymap.set('n', '<C-t>', ":tabnew +term<CR>i", { silent = true })
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n>", { silent = true })
+
 -- [[ Configure Comment ]]
 vim.keymap.set('n', '<C-c>', ':Commentary<CR>', { silent = true })
 vim.keymap.set('v', '<C-c>', ':Commentary<CR>', { silent = true })
