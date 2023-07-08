@@ -225,6 +225,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Set English
+vim.api.nvim_exec ('language en_US', true)
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
