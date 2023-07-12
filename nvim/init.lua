@@ -308,7 +308,7 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').find_files, { desc = 'Quick Search' })
 vim.keymap.set('n', '<C-g>', require('telescope.builtin').live_grep, { desc = 'Live [G]rep' })
-vim.keymap.set('n', '<C-e>', require('telescope').extensions.file_browser.file_browser, { desc = 'Open File [E]xploler' })
+vim.keymap.set('n', '<C-e>', ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { desc = 'Open File [E]xploler' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
