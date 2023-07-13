@@ -30,7 +30,12 @@ require('lazy').setup({
 
   -- Git related plugins
   'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
+  {
+    'tpope/vim-rhubarb',
+    config = function()
+      vim.keymap.set('n', 'go', ':GBrowse<CR>', { silent = true })
+    end,
+  },
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
