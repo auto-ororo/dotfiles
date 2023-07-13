@@ -33,7 +33,7 @@ require('lazy').setup({
   {
     'tpope/vim-rhubarb',
     config = function()
-      vim.keymap.set('n', 'go', ':GBrowse<CR>', { silent = true })
+      vim.keymap.set('x', 'go', ':GBrowse<CR>', { silent = true })
     end,
   },
 
