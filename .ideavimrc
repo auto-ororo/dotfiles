@@ -10,6 +10,7 @@ nnoremap gn :action VcsShowNextChangeMarker<CR>
 nnoremap gb :action VcsShowPrevChangeMarker<CR>
 nnoremap gu :action Vcs.RollbackChangedLines<CR>
 xnoremap go :action Github.Open.In.Browser<CR>
+nnoremap go :action Github.Open.In.Browser<CR>
 
 nnoremap U :action FindUsages<CR>
 nnoremap R :action RenameElement<CR>
