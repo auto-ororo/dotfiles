@@ -232,7 +232,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Set English
-vim.api.nvim_exec ('language en_US', true)
+vim.cmd('language en_US.UTF-8', true)
 
 -- [[ Basic Keymaps ]]
 
