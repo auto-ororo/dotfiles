@@ -51,3 +51,5 @@ load-nvmrc() {
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd load-nvmrc
+
+export PATH=$PATH:$HOME/.maestro/bin
