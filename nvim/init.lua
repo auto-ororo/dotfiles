@@ -450,6 +450,15 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  yamlls = {
+    format = {
+      enable = true
+    },
+    editor = {
+      formatOnType = true
+    },
+    completion = true
+  }
 }
 
 -- Setup neovim lua configuration
