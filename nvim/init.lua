@@ -4,6 +4,13 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- 標準的なキーバインドはAndroid Studioなどの他IDEが参照するので.vimrcで切り出している
+vim.cmd('source ~/.vimrc')
+
+if vim.g.vscode == 1 then
+  return
+end
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -533,5 +540,3 @@ cmp.setup {
   },
 }
 
--- 標準的なキーバインドはAndroid Studioなどの他IDEが参照するので.vimrcで切り出している
-vim.cmd('source ~/.vimrc')
