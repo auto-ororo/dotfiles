@@ -34,8 +34,6 @@ export PATH="$PATH:~/.local/bin"
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 function load-nvm () {
   export NVM_DIR="$HOME/.nvm"
   [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
