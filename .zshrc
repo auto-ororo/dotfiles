@@ -34,20 +34,6 @@ export PATH="$PATH:~/.local/bin"
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
 
-function load-nvm () {
-  export NVM_DIR="$HOME/.nvm"
-  [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
-}
-
-load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    if ! type nvm >/dev/null; then
-      load-nvm
-    fi
-    nvm use
-  fi
-}
-autoload -Uz add-zsh-hook
-add-zsh-hook chpwd load-nvmrc
-
 export PATH=$PATH:$HOME/.maestro/bin
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
