@@ -37,3 +37,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$HOME/.maestro/bin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(uv generate-shell-completion zsh)"
