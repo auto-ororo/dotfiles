@@ -31,9 +31,13 @@ alias teee='tee >(pbcopy)'
 
 export PATH="$PATH:~/.local/bin"
 
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 export PATH=$PATH:$JAVA_HOME/bin
 
 export PATH=$PATH:$HOME/.maestro/bin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
