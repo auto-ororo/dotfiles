@@ -25,3 +25,4 @@
 !.gitignore
 !.gitkeep
 !/install.sh
+!.tmux.conf

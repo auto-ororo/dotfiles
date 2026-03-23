@@ -37,7 +37,13 @@ export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$HOME/.maestro/bin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+<<<<<<< HEAD
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(uv generate-shell-completion zsh)"
+export PATH="$HOME/.local/bin:$PATH"
